@@ -554,7 +554,6 @@ var/list/ai_verbs_default = list(
 			var/mob/living/carbon/human/dummy/dummy = new ()
 			//This doesn't include custom_items because that's ... hard.
 			client.prefs.dress_preview_mob(dummy)
-			sleep(1 SECOND) //Strange bug in preview code? Without this, certain things won't show up. Yay race conditions?
 			dummy.regenerate_icons()
 
 			var/new_holo = getHologramIcon(getCompoundIcon(dummy))

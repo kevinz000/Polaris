@@ -841,6 +841,7 @@ proc/ColorTone(rgb, tone)
 
 //getFlatIcon but generates an icon that can face ALL four directions. The only four.
 /proc/getCompoundIcon(atom/A)
+	COMPILE_OVERLAYS(A)
 	var/icon/north = getFlatIcon(A,defdir=NORTH)
 	var/icon/south = getFlatIcon(A,defdir=SOUTH)
 	var/icon/east = getFlatIcon(A,defdir=EAST)
