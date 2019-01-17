@@ -17,3 +17,5 @@
 #define MECHFAB		0x0004	//Mechfab
 #define CHASSIS		0x0008	//For protolathe, but differently
 #define PROSFAB		0x0010  //For prosthetics fab
+
+#define INVALID_DESIGN_ID		"INVALID"
