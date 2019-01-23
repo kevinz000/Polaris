@@ -172,15 +172,17 @@ blah blah destroy() delete every effect etc etc
 
 /datum/component/vortex_powers/proc/on_effect_create(obj/effect/hierophant/effect)
 	all_effects += effect
-	if(istype(effect, /obj/effect/hierophant/chaser))
-		chasers += effect
+
+/datum/component/vortex_powers/proc/on_effect_destroy(obj/effect/hierophant/effect)
+	all_effects -= effect
 
 /datum/component/vortex_powers/proc/can_damage(obj/effect/hierophant/effect, atom/target)
 	if(target == parent)
 		return FALSE
 	return TRUE
 
-
+/datum/component/vortex_powers/proc/check_global_cooldown()
+	return (global_cooldown < world.time)
 
 
 //TODO: COMSIG PORT
