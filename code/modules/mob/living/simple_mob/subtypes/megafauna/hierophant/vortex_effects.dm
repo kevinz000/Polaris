@@ -76,6 +76,7 @@
 	var/speed = 3							//Deciseconds per step
 	var/seeking = FALSE
 	var/damage = 10
+	var/can_diagonal = FALSE
 
 
 
@@ -227,7 +228,7 @@
 		playsound(M,'sound/weapons/sear.ogg', 50, 1, -4)
 		M.take_damage(damage, BURN, 0, 0)
 
-/obj/effect/hierophant
+/obj/effect/hierophant/beacon
 	name = "hierophant beacon"
 	desc = "A strange beacon, allowing mass teleportation for those able to use it."
 	icon = 'icons/obj/lavaland/artefacts.dmi'
@@ -236,5 +237,5 @@
 	layer = LOW_OBJ_LAYER
 	anchored = TRUE
 
-/obj/effect/hierophant/ex_act()
+/obj/effect/hierophant/beacon/ex_act()
 	return
